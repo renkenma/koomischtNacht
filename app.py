@@ -44,9 +44,9 @@ for i in range(aufgedeckt):
 if st.session_state.erraten:
     st.success("🎉 Richtig geraten!")
     st.markdown("""
-    ### 😂 Dein Geschenk: 3. Junge & Wilde komische Nacht Oldenburg"!
+    ### 😂 Dein Geschenk: 3. Junge & Wilde komische Nacht Oldenburg!
 
-    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen! 😊
+    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen 😊!
     """)
     st.balloons()
 
@@ -56,7 +56,7 @@ if st.session_state.erraten:
 elif st.session_state.loesung_gezeigt:
     st.markdown("### 😂 Dein Geschenk: 3. Junge & Wilde komische Nacht Oldenburg!")
     st.warning("""
-    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen! 😊
+    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen 😊!
     """)
     st.balloons()
 
