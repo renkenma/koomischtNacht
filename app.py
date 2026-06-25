@@ -12,7 +12,7 @@ HINWEISE = [
     "Es verschlägt uns nicht allzu weit. Wir kommen mit dem Rad dorthin.",
     "Das Pokemon-Duo hierzu waren Enton und Gengar.",
     "Enton ist tollpatschig und Gengar macht gerne Späße.",
-    "Nahe der Züge soll es ganz schön sein.",
+    "In der Nähe der Züge soll es ganz schön sein.",
     "Und wir sollten eine Menge lachen können.",
 ]
 
