@@ -9,14 +9,14 @@ if "hinweise_aufgedeckt" not in st.session_state:
     st.session_state.falsche_versuche = 0
 
 HINWEISE = [
-    "1",
-    "Du wirst dabei tanzen – oder zumindest mitwippen.",
-    "Der Name des Events klingt nach einer Krankheit – aber der angenehmen Art.",
-    "Wasser spielt beim Namen eine wichtige Rolle.",
-    "Das Event beginnt mit dem Wort 'Strand'.",
+    "Es verschlägt uns nicht allzu weit. Wir kommen mit dem Rad dorthin.",
+    "Das Pokemon-Duo hierzu waren Enton und Gengar.",
+    "Enton ist tollpatschig und Gengar macht gerne Späße.",
+    "Nahe der Züge soll es ganz schön sein.",
+    "Und wir sollten eine Menge lachen können.",
 ]
 
-SCHLUESSEL_WOERTER = ["strandfieber", "strand fieber", "festival", "strand"]
+SCHLUESSEL_WOERTER = ["oldenburg", "comedy", "lachen", "gleispark", "komische nacht"]
 
 # ==========================================
 # STARTSEITE
@@ -44,10 +44,9 @@ for i in range(aufgedeckt):
 if st.session_state.erraten:
     st.success("🎉 Richtig geraten!")
     st.markdown("""
-    ### 🏖️ Strandfieber Festival!
+    ### 😂 Dein Geschenk: 3. Junge & Wilde komische Nacht Oldenburg"!
 
-    Treibende Beats, Festival-Vibes und gute Laune – das wartet auf dich!
-    Pack die Tanzschuhe und die Sonnenbrille ein. Wir sehen uns auf dem Festival! 🎶☀️
+    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen! 😊
     """)
     st.balloons()
 
@@ -55,10 +54,9 @@ if st.session_state.erraten:
 # LÖSUNG ANGEZEIGT
 # ==========================================
 elif st.session_state.loesung_gezeigt:
-    st.markdown("### 🏖️ Dein Geschenk: Strandfieber Festival!")
+    st.markdown("### 😂 Dein Geschenk: 3. Junge & Wilde komische Nacht Oldenburg!")
     st.warning("""
-    Treibende Beats, Festival-Vibes und gute Laune – das wartet auf dich!
-    Pack die Tanzschuhe und die Sonnenbrille ein. Wir sehen uns auf dem Festival! 🎶☀️
+    Der Gleispark ruft! Lass uns in der Abendsonne in schöner Location entspannen und zusammen lachen! 😊
     """)
     st.balloons()
 
@@ -78,13 +76,13 @@ else:
         if st.button("✅ Raten", use_container_width=True, key=f"btn_raten_{aufgedeckt}"):
             if rateversuch.strip():
                 tipp_lower = rateversuch.strip().lower()
-                if any(kw in tipp_lower for kw in SCHLUESSEL_WOERTER):
+                if any(kw in tipp_lower for kw in SCHLUESSEL_WOERTER) and 'comedy'.lower() in tipp_lower:
                     st.session_state.erraten = True
                     st.rerun()
                 else:
-                    st.session_state.falsche_versuche += 1
-                    if aufgedeckt < len(HINWEISE):
-                        st.session_state.hinweise_aufgedeckt += 1
+                    #st.session_state.falsche_versuche += 1
+                    #if aufgedeckt < len(HINWEISE):
+                        #st.session_state.hinweise_aufgedeckt += 1
                     st.rerun()
             else:
                 st.warning("Gib erst einen Tipp ein!")
