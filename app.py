@@ -9,7 +9,7 @@ if "hinweise_aufgedeckt" not in st.session_state:
     st.session_state.falsche_versuche = 0
 
 HINWEISE = [
-    "Das Event ist draußen – pack am besten Sonnencreme ein.",
+    "1",
     "Du wirst dabei tanzen – oder zumindest mitwippen.",
     "Der Name des Events klingt nach einer Krankheit – aber der angenehmen Art.",
     "Wasser spielt beim Namen eine wichtige Rolle.",
